@@ -1,0 +1,85 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* stylelint-disable */
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+/* stylelint-enable */
+
+/* Begin site styles below */
+
+/* Base Styles (element selectors; color, typography, and that's it)*/
+
+
+
+
+main{
+  font-size: 1.125em; /* 18px / 16px = 1.125em */
+  line-height: 1.222em; /* 22px / 18px = 1.222... */
+  background-image: url(22px-baseline.png);
+  padding: 1.222em 1em;
+
+  float:left;
+}
+
+  /*font-family: Merriweather, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 26px;*/
+
+
+/* Layout (id selectors; width/height, position, flexbox, grid)*/
+
+
+/* Module/Modular Section (class or descedent selectors; repeating specific styles) */
+
+/*#navigation a[href="#content"] {
+  color: black;
+  text-decoration: none;
+}*/
+.menu{
+  background-color: blue;
+  float: left;
+  list-style-type: none;
+  width: 100%;
+  padding:.78em;
+  }
+.menu_button{
+  display:inline;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+
+}
+.nav_link{
+  color: black;
+  text-align: center;
+  text-decoration: none;
+
+}
+.page_name{
+  font-size: 3em;
+}
+li.menu_button:hover{
+  background-color: red;
+}
+li.menu_button:active{
+  background-color: darkred;
+}
+/* State (repeat the structure above; media queries, JavaScript-dependent styles) */
+
+@media screen and (min-width: 630px) {
+  html {
+    font-size: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media screen and (min-width: 880px) {
+  html {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
