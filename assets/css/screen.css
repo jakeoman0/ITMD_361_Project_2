@@ -24,10 +24,7 @@ main{
   float:left;
 }
 
-p{
-  /*color:#787778;*/
 
-}
 /* Layout (id selectors; width/height, position, flexbox, grid)*/
 
 
@@ -67,6 +64,46 @@ p{
   font-size: 3em;
   padding: 4px;
 }
+.headding{
+  font-size: 2em;
+  font-weight: bold;
+  padding-top: 7px;
+  padding-bottom:7px;
+  line-height: .85em;
+}
+
+.sub-headding{
+  font-size: 1.25em;
+  padding-top: 3px;
+  padding-bottom:3px;
+}
+
+.job-text{
+  font-size: 1.25em;
+}
+
+.job-list{
+  padding-left: 1em;
+  padding-bottom: 15px;
+}
+
+a.linkdin{
+  color: #0077B5;
+  text-decoration: none;
+  transition: .4s;
+}
+
+a.linkdin:hover{
+  color: #13acff;
+  transition: .4s;
+
+}
+
+ul.resume-list{
+  list-style: circle;
+  padding-left: 1em;
+  padding-bottom: 15px;
+}
 
 a.nav-link:hover{
   background-color: #25126c;
@@ -84,20 +121,13 @@ a.nav-link:active{
     .menu{
       flex-direction: column;
     }
-    /*.menu-button{
-      display: none;
-    }
-    .menu-toggle{
-      display: inline;
-    }*/
+
 }
 @media screen and (min-width: 340px) {
     main{
     font-size: 20px;
   }
-    /*.menu-toggle{
-      display: none;
-    }*/
+
 }
 
 @media screen and (min-width: 630px) {
@@ -109,9 +139,7 @@ a.nav-link:active{
     padding-left: 5%;
     padding-right: 5%;
   }
-  /*.menu-toggle{
-    display: none;
-  }*/
+
 }
 
 @media screen and (min-width: 880px) {
@@ -119,7 +147,5 @@ a.nav-link:active{
     padding-left: 15%;
     padding-right: 15%;
   }
-  /*.menu-toggle{
-    display: none;
-  }*/
+
 }
