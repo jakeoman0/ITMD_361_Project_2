@@ -14,14 +14,24 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html{
   /*background-color: #0f033d;*/
-  background-color:#ffffff;
+  /*background-color:#ffffff;*/
+  background-image: url("/assets/Images/diagmonds_@2X_light_black.jpg");
+  background-repeat: repeat;
 }
 main{
   font-size: 1.125em; /* 18px / 16px = 1.125em */
   line-height: 1.222em; /* 22px / 18px = 1.222... */
 
   padding: 1.222em 1em;
-  float:left;
+  /*float:left;*/
+
+  background-color: #bfbfbf;
+  padding-bottom: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0 0 0 0.19);
+  /*display: flex;
+  flex-direction: column;
+  flex-grow: 1;*/
+
 }
 
 
@@ -58,11 +68,13 @@ main{
   padding-top: .78em;
   padding-bottom: .78em;
   display: inherit;
+  border-radius: 5px 5px;
   transition: .4s;
 }
 .page-name{
   font-size: 3em;
   padding: 4px;
+  color: white;
 }
 .headding{
   font-size: 2em;
@@ -86,10 +98,29 @@ main{
   padding-left: 1em;
   padding-bottom: 15px;
 }
+.linkdin-img{
+  width: 1em;
+  height: 1em;
+}
+
+.list-grid{
+
+  /*display: flex;
+  flex-direction: row;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+/*.list-grid li:first-child{
+  padding: 10px;
+}*/
 
 a.linkdin{
   color: #0077B5;
   text-decoration: none;
+  font-size: 2em;
   transition: .4s;
 }
 
@@ -114,7 +145,9 @@ a.nav-link:active{
   background-color: #080124;
   transition: .4s;
 }
-
+#new-yorker{
+  font-family: 'Dancing Script', cursive;
+}
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
 @media screen and (max-width: 340px) {
 
@@ -129,23 +162,65 @@ a.nav-link:active{
   }
 
 }
+@media screen and (min-width: 430px) {
+    main{
+    font-size: 20px;
+  }
+  html{
+    transition: .4s;
+  }
+  .list-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  #cisco-list{
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+}
 
 @media screen and (min-width: 630px) {
   main{
     font-size: 1.125em;
+    border-radius: 0 0 10px 10px;
+
   }
   html {
 
     padding-left: 5%;
     padding-right: 5%;
+    padding-bottom: 50px;
   }
-
+  .menu{
+    border-radius: 5px
+  }
+  .list-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+  #cisco-list{
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
 }
 
 @media screen and (min-width: 880px) {
+  main{
+    border-radius: 0 0 10px 10px;
+
+  }
   html {
     padding-left: 15%;
     padding-right: 15%;
+    padding-bottom: 50px;
+  }
+  .list-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+  #cisco-list{
+    grid-column: 1;
+    grid-row: 1 / 3;
   }
 
 }
