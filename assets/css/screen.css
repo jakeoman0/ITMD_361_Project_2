@@ -180,6 +180,10 @@ ul.resume-list {
     padding-right: 5%;
     padding-bottom: 2.77em;
   }
+  main {
+    border-radius: 0 0 0.55em 0.55em;
+
+  }
   .gallery {
     display: grid;
     grid-template-columns: 50% 50%;
