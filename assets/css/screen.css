@@ -16,16 +16,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 html {
   font-family: Roboto;
-  font-size: 1.125em;
-  line-height: 1.222em;
+  font-size: 1.5em; /*24/16=1.5em*/
+  line-height: 1.626em; /*26/16=1.626em*/
+
+  /* Background image came from Toptal.com and is called Diagmonds - Created by INS
+  I modified the color of the image*/
   background-image: url("/assets/Images/diagmonds_@2X_light_black.jpg");
   background-repeat: repeat;
 }
 main {
-  padding: 1.222em 1em;
+  padding: 1.222em 1em; /*19.5/16=1.222em*/
   background-color: #bfbfbf;
-  padding-bottom: 2.77em;
-  box-shadow: 0 0.22em 0.44em 0 rgba(0,0,0,0.2), 0 0.33em 1.11em 0 rgba(0 0 0 0.19);
+  padding-bottom: 2.777em; /*44.5/16=2.777em*/
+  box-shadow: 0em 0.375em 0.3125em black;  /*6/16=.375   5/16=.3125*/
 }
 
 
@@ -33,19 +36,23 @@ main {
 
 
 .gallery {
+  padding: 1em; /*11/16=.7em*/
   display: grid;
-  grid-template-columns: 100%;
-  background-color: #090909;
-  grid-row-gap: 0;
-  object-fit: cover;
-}
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #a19c9c;
+  grid-column-gap: 0.5em;
+  grid-row-gap: 0.5em;
+  border-radius: 0.5em;
+  }
 .gallery img {
   object-fit: cover;
+  object-position: center center;
+  overflow: auto;
+  display:block;
   width: 100%;
   height: 100%;
-}
-.gallery li {
-  padding: 0.5em;
+  border-radius: 0.5em;
+  box-shadow: 0em 0.375em 0.3125em #797272;  /*6/16=.375   5/16=.3125*/
 }
 .gallery-title {
   font-family: "Dancing Script";
@@ -56,13 +63,13 @@ main {
 .headding {
   font-size: 2em;
   font-weight: bold;
-  padding-top: 0.388em;
-  padding-bottom: 0.388em;
-  line-height: 0.85em;
+  padding-top: 0.388em; /*6/16=.388em*/
+  padding-bottom: 0.388em;  /*6/16=.388em*/
+  line-height: 0.85em;  /*13.5/16=.85em*/
 }
 .job-list {
   padding-left: 1em;
-  padding-bottom: 0.83em;
+  padding-bottom: 0.83em; /*13.5/16=.83em*/
 }
 .job-text {
   font-size: 1.25em;
@@ -86,22 +93,18 @@ main {
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-.menu-button {
-  text-align: center;
-  flex-basis: 1;
-  flex-shrink: 0;
-}
-.nav-link {
+.menu a {
   color: white;
   text-align: center;
   text-decoration: none;
-  padding-left: 0.388em;
-  padding-right: 0.388em;
-  padding-top: 0.78em;
-  padding-bottom: 0.78em;
+  padding: 0.78em 0.388em;  /*12.5/16=.78em     6/16=.388em*/
   display: inherit;
-  border-radius: 0.55em 0.55em 0 0;
   transition: 0.4s;
+}
+.menu li {
+  text-align: center;
+  flex-basis: 1;
+  flex-shrink: 0;
 }
 .page-name {
   font-size: 3em;
@@ -134,7 +137,7 @@ a.nav-link:hover {
 ul.resume-list {
   list-style: circle;
   padding-left: 1em;
-  padding-bottom: 0.83em;
+  padding-bottom: 0.83em; /*13.5/16=.83em*/
 }
 #new-yorker {
   font-family: "Dancing Script";
@@ -144,21 +147,17 @@ ul.resume-list {
 /* Module/Modular Section (class or descedent selectors; repeating specific styles) */
 
 /* State (repeat the structure above; media queries, JavaScript-dependent styles) */
-@media screen and (min-width: 0) {
-  html {
-    font-size: 1.5em;
-    line-height: 1.626em;
-  }
-}
+
 @media screen and (min-width: 22.222222222em) {
   html {
     font-size: 1.25em;
-    line-height: 1.357em;
+    line-height: 1.357em; /*21.75/16=1.357em*/
     transition: 0.4s;
   }
   .menu {
     flex-direction: row;
   }
+
   .list-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -172,37 +171,27 @@ ul.resume-list {
 @media screen and (min-width: 35em) {
   html {
     font-size: 1.125em;
-    line-height: 1.2213em;
+    line-height: 1.2213em;  /*19.5/16=1.2213em*/
     border-radius: 0 0 0.55em 0.55em;
     padding-left: 5%;
     padding-right: 5%;
-    padding-bottom: 2.77em;
+    padding-bottom: 2.77em; /*44.5/16=2.77em*/
   }
   main {
     border-radius: 0 0 0.55em 0.55em;
   }
   .gallery {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    background-color: #090909;
-    grid-row-gap: 0;
-    object-fit: cover;
-  }
-  .gallery img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .gallery li {
-    padding: 0.5em;
+    grid-template-columns: repeat(2, 1fr);
   }
   .list-grid {
-    display: grid;
     grid-template-columns: repeat(3,1fr);
   }
   .menu {
     border-radius: 0.55em 0.55em 0 0;
     flex-direction: row;
+  }
+  .nav-link{
+    border-radius: .55em .55em 0 0;
   }
   #cisco-list {
     grid-column: 1;
@@ -212,32 +201,16 @@ ul.resume-list {
 
 @media screen and (min-width: 48.888888888em) {
   html {
-    font-size: 1.125em;
-    line-height: 1.2213em;
     padding-left: 15%;
     padding-right: 15%;
-    padding-bottom: 2.77em;
   }
   main {
     border-radius: 0 0 0.55em 0.55em;
   }
   .gallery {
-    display: grid;
-    grid-template-columns: 33.33333333333333% 33.33333333333333% 33.33333333333333%;
-    background-color: #090909;
-    grid-row-gap: 0;
-    object-fit: cover;
-  }
-  .gallery img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .gallery li {
-    padding: 0.5em;
+    grid-template-columns: repeat(3, 1fr);
   }
   .list-grid {
-    display: grid;
     grid-template-columns: repeat(4,1fr);
   }
   .menu {
@@ -251,32 +224,13 @@ ul.resume-list {
 }
 @media screen and (min-width: 100em) {
   html {
-    font-size: 1.125em;
-    line-height: 1.2213em;
     padding-left: 15%;
     padding-right: 15%;
-    padding-bottom: 2.77em;
   }
   main {
     border-radius: 0 0 0.55em 0.55em;
   }
-  .gallery {
-    display: grid;
-    grid-template-columns: 33.33333333333333% 33.33333333333333% 33.33333333333333%;
-    background-color: #090909;
-    grid-row-gap: 0;
-    object-fit: cover;
-  }
-  .gallery img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .gallery li {
-    padding: 0.5em;
-  }
   .list-grid {
-    display: grid;
     grid-template-columns: repeat(5,1fr);
   }
   .menu {
