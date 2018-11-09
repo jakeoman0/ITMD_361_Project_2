@@ -18,7 +18,7 @@ html {
   line-height: 1.626em; /*26/16=1.626em*/
   /* Background image came from Toptal.com and is called Diagmonds - Created by INS
   I modified the color of the image*/
-  background-image: url("/assets/Images/diagmonds_@2X_light_black.jpg");
+  background-image: url("/assets/images/diagmonds_@2X_light_black.jpg");
   background-repeat: repeat;
 }
 main {
@@ -158,6 +158,7 @@ ul.resume-list {
   .list-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 1em;
   }
   #cisco-list {
     grid-column: 1;
